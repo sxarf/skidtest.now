@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>official skid test</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="grid-bg"></div>
+    <div class="top-bar">
+        <h1>Skid Test</h1>
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">About</a>
+    </div>
+    <h1 id="bouncy">Skid Test</h1>
+    <div class="questions">
+        <div class="attempt-counter">took you: <span id="attempt-count">0</span> <span id="attempt-word">times</span></div>
+        <div class="question">
+            <h3>Explain the difference between ref, out and in parameters in C#</h3>
+            <input type="text" placeholder="Your answer" data-answer="ref: pass by reference, must be initialized; out: pass by reference, must be assigned before return; in: read-only reference (C# 7.2+)">
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question">
+            <h3>What's the difference between struct and class in C#? When would you use one over the other?</h3>
+            <input type="text" placeholder="Your answer" data-answer="struct: value type, stack allocated, no inheritance; class: reference type, heap allocated, supports inheritance. Use struct for small, immutable data; class for complex objects with behavior.">
+            <div class="feedback"></div>
+        </div>
+
+        <div class="question">
+            <h3>Explain what async and await actually do in C#. Give an example where forgetting await breaks your code.</h3>
+            <input type="text" placeholder="Your answer" data-answer="async enables await; await suspends method until task completes. Without await, Task runs but result is ignored. Example: var result = await HttpClient.GetStringAsync(...) → works; var task = HttpClient.GetStringAsync(...) → task ignored, may throw later.">
+            <div class="feedback"></div>
+        </div>
+
+        <button>Submit</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.0/dist/vanilla-tilt.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
