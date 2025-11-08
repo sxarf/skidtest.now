@@ -6,7 +6,3 @@
 
 
 all created by sxarf btw
-
-
-
--# i use arch btw
